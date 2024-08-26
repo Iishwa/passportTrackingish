@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A2FBEF6-3326-4650-BFFB-A9B20B7F6357}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PassportStatusTrackingApplication</RootNamespace>
+    <AssemblyName>PassportStatusTrackingApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Wikitechy">
+      <HintPath>..\..\..\..\Downloads\Wikitechy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplyPassport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplyPassport.Designer.cs">
+      <DependentUpon>ApplyPassport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeStatus.Designer.cs">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeStatusPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUserPage.Designer.cs">
+      <DependentUpon>NewUserPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionPage.Designer.cs">
+      <DependentUpon>OptionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowStatus.Designer.cs">
+      <DependentUpon>ShowStatus.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ApplyPassport.resx">
+      <DependentUpon>ApplyPassport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeStatus.resx">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeStatusPage.resx">
+      <DependentUpon>ChangeStatusPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUserPage.resx">
+      <DependentUpon>NewUserPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionPage.resx">
+      <DependentUpon>OptionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowStatus.resx">
+      <DependentUpon>ShowStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2g1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3q1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1q.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1q1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1q2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6q.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6q1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4q.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pp1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3q2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6q2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2q.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pp2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pp9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pp7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3q3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
